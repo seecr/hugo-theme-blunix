@@ -2,6 +2,8 @@
 
 A professional, clean Hugo theme designed for consulting and service-based businesses. Features a flexible block-based page layout system, multilingual support, and modern responsive design.
 
+This is a slightly modified version to remove some blunix-specific content and focus on the theme itself. For the original see [Blunix GmbH's Hugo Theme Blunix](https://github.com/Blunix-GmbH/hugo-theme-blunix).
+
 ## Preview
 
 ![Theme Screenshot](https://raw.githubusercontent.com/Blunix-GmbH/hugo-theme-blunix/main/images/screenshot.png)

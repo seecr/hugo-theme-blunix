@@ -1,17 +1,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="keywords" content="linux, debian, ubuntu, consulting, hosting, training, classes, courses" />
-  <meta name="author" content="Blunix GmbH" />
-  <meta name="website" content="https://www.blunix.com" />
-  <meta name="email" content="info@blunix.com" />
+  <meta name="keywords" content="{{ if .Params.keywords }}{{ delimit .Params.keywords ", " }}{{ else }}linux, debian, ubuntu, consulting, hosting, training, classes, courses{{ end }}" />
+  <meta name="author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}Blunix GmbH{{ end }}" />
+  <meta name="website" content="{{ if .Params.website }}{{ .Params.website }}{{ else }}https://www.blunix.com{{ end }}" />
+  <meta name="email" content="{{ if .Params.email }}{{ .Params.email }}{{ else }}info@blunix.com{{ end }}" />
   <meta name="version" content="2.0.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   {{/* Canonical Link - Remove index.html from URLs */}}
   {{- $canonicalURL := .Permalink | replaceRE "/index\\.html$" "/" | replaceRE "/index\\.html#" "/#" -}}
   <link rel="canonical" href="{{ $canonicalURL }}" />
-  
+
   {{- if .IsTranslated -}}
   {{- $currentLangURL := .Permalink | replaceRE "/index\\.html$" "/" | replaceRE "/index\\.html#" "/#" -}}
   <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ $currentLangURL }}" />

@@ -1,10 +1,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="keywords" content="{{ if .Params.keywords }}{{ delimit .Params.keywords ", " }}{{ else }}linux, debian, ubuntu, consulting, hosting, training, classes, courses{{ end }}" />
-  <meta name="author" content="{{ if .Params.author }}{{ .Params.author }}{{ else }}Blunix GmbH{{ end }}" />
-  <meta name="website" content="{{ if .Params.website }}{{ .Params.website }}{{ else }}https://www.blunix.com{{ end }}" />
-  <meta name="email" content="{{ if .Params.email }}{{ .Params.email }}{{ else }}info@blunix.com{{ end }}" />
+  <meta name="keywords" content="{{ if site.Params.keywords }}{{ delimit site.Params.keywords ", " }}{{ else }}linux, debian, ubuntu, consulting, hosting, training, classes, courses{{ end }}" />
+  <meta name="author" content="{{ if site.Params.author }}{{ site.Params.author }}{{ else }}Blunix GmbH{{ end }}" />
+  <meta name="website" content="{{ if site.Params.website }}{{ site.Params.website }}{{ else }}https://www.blunix.com{{ end }}" />
+  <meta name="email" content="{{ if site.Params.email }}{{ site.Params.email }}{{ else }}info@blunix.com{{ end }}" />
   <meta name="version" content="2.0.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
@@ -60,7 +60,7 @@
       {{ $quality := 85 }}
 
       {{ if lt $img.Width $targetWidth }}
-        {{/* Image is smaller than target - don't upscale, use original */}}
+        {{/* Image is smaller than target - do not upscale, use original */}}
         <link rel="preload" as="image" href="{{ $img.RelPermalink }}" fetchpriority="high" />
       {{ else }}
         {{/* Image is >= 1920px - may need resizing to 1920px */}}

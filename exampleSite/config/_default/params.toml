@@ -19,3 +19,8 @@ link = "tel:+1234567890"
 name = "contact@example.com"
 icon = "fa-solid fa-envelope"
 link = "mailto:contact@example.com"
+
+keywords = ["hugo", "theme", "starter", "business", "professional"]
+author = "Blunix GmbH"
+website = "https://blunix.com"
+email = "info@blunix.com"

@@ -7,10 +7,6 @@ description = 'A professional business theme for Hugo'
 theme = "hugo-theme-blunix"
 uglyURLs = false
 disableKinds = ["taxonomy", "term"]
-keywords = ["hugo", "theme", "starter", "business", "professional"]
-author = "Blunix GmbH"
-website = "https://blunix.com"
-email = "info@blunix.com"
 
 [markup]
 [markup.goldmark]

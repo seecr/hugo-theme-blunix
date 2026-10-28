@@ -56,7 +56,7 @@
                     <div class="relative overflow-hidden">
                         <a href="{{ $link }}" {{ if $isExternal }}target="_blank" rel="noopener noreferrer"{{ end }} aria-label="{{ if $isExternal }}Visit external link: {{ .Title }}{{ else }}Read the blogpost: {{ .Title }}{{ end }}" class="block overflow-hidden">
                             {{ if .Params.image }}
-                            <div class="w-full overflow-hidden" style="aspect-ratio: 16 / 9;">
+                            <div class="w-full overflow-hidden aspect-16-9">
                                 <div class="w-full h-full transform duration-500 ease-in-out group-hover:scale-110">
                                     {{ partial "components/image-responsive.html" (dict
                                       "src" (strings.TrimPrefix "/" .Params.image)

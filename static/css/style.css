@@ -3999,6 +3999,17 @@
       color: var(--color-slate-500);
     }
   }
+  .prose-ul\:text-2xl {
+    & :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      font-size: var(--text-2xl);
+      line-height: var(--tw-leading, var(--text-2xl--line-height));
+    }
+  }
+  .prose-ul\:text-slate-500 {
+    & :is(:where(ul):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+      color: var(--color-slate-500);
+    }
+  }
   .prose-a\:font-semibold {
     & :is(:where(a):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
       --tw-font-weight: var(--font-weight-semibold);

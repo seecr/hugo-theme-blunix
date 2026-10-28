@@ -4,7 +4,14 @@
       <h2 class="mb-4 md:text-4xl md:leading-normal text-2xl leading-normal font-semibold">{{ .Params.title }}</h2>
       {{ with .Params.subtitle }}<p class="text-slate-500 text-2xl duration-500 mt-3">{{ . }}</p>{{ end }}
     </div>
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
+    {{ $itemCount := len .Params.items }}
+    {{ $lgCols := "lg:grid-cols-4" }}
+    {{ if eq $itemCount 2 }}
+      {{ $lgCols = "lg:grid-cols-2" }}
+    {{ else if eq $itemCount 3 }}
+      {{ $lgCols = "lg:grid-cols-3" }}
+    {{ end }}
+    <div class="grid {{ $lgCols }} md:grid-cols-2 grid-cols-1 mt-8 gap-[30px]">
       {{ range .Params.items }}
       <div class="group relative p-6 shadow-xs rounded-xl bg-white overflow-hidden">
         <div class="relative overflow-hidden text-transparent -m-3">
